@@ -232,13 +232,14 @@ hr {
   margin-bottom: 8px;
   padding-left: 10px;
 }
-.container {
-  margin-left: 254px;
-  width: 100%;
-  
+.container{
+  margin-left:254px;
+  width:calc(100% - 254px);
+  transition:0.3s;
 }
-.sidebar.close ~ .container {
-  margin-left: 100px;
+.sidebar.close ~ .container{
+  margin-left:100px;
+  width:calc(100% - 100px);
 }
 .search-head {
   min-width: 425px;
@@ -336,16 +337,18 @@ hr {
 }
 /* cards */
 .cards{
-    display:flex;
-    gap:48px;
-    width: 100%;
+display:flex;
+gap:24px;
+width:100%;
+flex-wrap:wrap;
 }
+
 .card{
-    width: 33.33%;
-    background:#fff;
-    box-shadow: 0 3px 15px #16161620;
-    border-radius:8px;
-    
+flex:1;
+min-width:220px;
+background:#fff;
+box-shadow:0 3px 15px #16161620;
+border-radius:8px;
 }
 .blue{
    background: linear-gradient(50deg, #ffffff 0%, #9fc9e52b 50%, #3f92ca09 90%)padding-box,
@@ -405,6 +408,10 @@ hr {
     font-family: 'Inter', sans-serif;
     font-size: 12px;
 overflow-x:auto;
+}
+.table-container{
+overflow-x:auto;
+-webkit-overflow-scrolling:touch;
 }
 
 /* table */
@@ -520,12 +527,116 @@ font-size:21px;
     font-size: 11px;
     text-decoration: underline;
 }
+.sidebar{
+transition:0.3s;
+}
 /* responsive */
+.menu-toggle{
+display:none;
+cursor:pointer;
+}
+
+.menu-toggle img{
+width:26px;
+}
+
+@media (max-width:768px){
+
+.menu-toggle{
+display:block;
+}
+
+.sidebar{
+left:0;
+top:0;
+height:100vh;
+transform:translateX(-100%);
+z-index:1000;
+}
+
+.sidebar.active{
+transform:translateX(0);
+}
+
+
+.container{
+margin-left:0;
+width:100%;
+}
+
+}
 
 @media (max-width:768px){
 
 .custom-table{
 min-width:700px;
+}
+
+}
+@media (max-width:768px){
+
+.search-head{
+flex-wrap:wrap;
+gap:10px;
+}
+
+.search{
+width:100%;
+}
+
+.search-field{
+width:100%;
+}
+
+.info{
+width:100%;
+justify-content:flex-end;
+}
+
+}
+@media (max-width:768px){
+
+.cards{
+flex-direction:column;
+gap:16px;
+}
+
+.card{
+width:100%;
+}
+
+.card-content{
+margin-right:0;
+}
+
+}
+@media (max-width:900px){
+
+.new{
+flex-direction:column;
+gap:10px;
+align-items:flex-start;
+}
+
+.news-link{
+align-self:flex-start;
+}
+
+}
+@media (max-width:768px){
+
+.container-content{
+padding:0 20px;
+}
+
+.immi{
+flex-direction:column;
+align-items:flex-start;
+gap:10px;
+}
+
+.immi-text p{
+font-size:22px;
 }
 
 }
