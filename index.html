@@ -144,12 +144,12 @@
 
                 <div class="search-head flex">
                     <div class="menu-toggle">
-    <img src="./assets/images/menu.svg" alt="menu">
-</div>
+                        <img src="./assets/images/menu.svg" alt="menu">
+                    </div>
                     <div class="search">
                         <img class="s-img" src="./assets/images/Search-icon.svg"
                             alt="search">
-                        <input class="search-field" type="text"
+                        <input id="searchInput" class="search-field" type="text"
                             placeholder="Suche etwas mithilfe von KI">
                     </div>
                     <div class="info flex">
@@ -222,145 +222,349 @@
                             </div>
                         </div>
                     </div>
- <!-- cards end  -->
-                <div class="table-container">
+                    <!-- cards end  -->
+                    <div class="table-container">
 
-                    <table class="custom-table">
+                        <table class="custom-table">
 
-                        <thead>
-                            <tr>
-                                <th>VON <img src="./assets/images/sort1.svg"
-                                        alt></th>
-                                <th>NACH <img src="./assets/images/sort1.svg"
-                                        alt></th>
-                                <th>E.BEGINN <img
-                                        src="./assets/images/sort1.svg"
-                                        alt></th>
-                                <th>NAME <img src="./assets/images/sort1.svg"
-                                        alt></th>
-                                <th>DAUER <img src="./assets/images/sort1.svg"
-                                        alt></th>
-                                <th>STATUS <img src="./assets/images/sort1.svg"
-                                        alt></th>
-                                <th>BEARBEITER <img
-                                        src="./assets/images/sort1.svg"
-                                        alt></th>
-                                <th>SPALTEN <img src="./assets/images/sort1.svg"
-                                        alt></th>
-                            </tr>
-                        </thead>
+                            <thead>
+                                <tr>
+                                    <th>VON <img src="./assets/images/sort1.svg"
+                                            alt></th>
+                                    <th>NACH <img
+                                            src="./assets/images/sort1.svg"
+                                            alt></th>
+                                    <th>E.BEGINN <img
+                                            src="./assets/images/sort1.svg"
+                                            alt></th>
+                                    <th>NAME <img
+                                            src="./assets/images/sort1.svg"
+                                            alt></th>
+                                    <th>DAUER <img
+                                            src="./assets/images/sort1.svg"
+                                            alt></th>
+                                    <th>STATUS <img
+                                            src="./assets/images/sort1.svg"
+                                            alt></th>
+                                    <th>BEARBEITER <img
+                                            src="./assets/images/sort1.svg"
+                                            alt></th>
+                                    <th>SPALTEN <img
+                                            src="./assets/images/sort1.svg"
+                                            alt></th>
+                                </tr>
+                            </thead>
 
-                        <tbody>
+                            <tbody>
 
-                            <tr>
-                                <td class="flags">
-                                    <img src="./assets/images/germany.svg"><img
-                                        class="arow"
-                                        src="./assets/images/arrowr.svg " alt>
-                                </td>
-                                <td class="flags">
-                                    <img src="./assets/images/germany.svg">
-                                </td>
-                                <td>21.08.2026</td>
-                                <td class="grey">Chris Weber</td>
-                                <td>90 Tage</td>
-                                <td><div class="status done"><img
-                                            src="./assets/images/Ellipseg.svg"
-                                            alt> Abgeschlossen</div></td>
-                                <td class="grey">Sabine Walter</td>
-                                <td class="actions">
-                                    <i class="icon-t"><img
-                                            src="./assets/images/duplicate.svg"
-                                            alt="duplicate"></i>
-                                    <i class="icon-t"><img
-                                            src="./assets/images/edit.svg"
-                                            alt="edit"></i>
-                                    <i class="icon-t"><img
-                                            src="./assets/images/delete.svg"
-                                            alt="delete"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="flags">
-                                    <img class="flag"
-                                        src="./assets/images/germany.svg"><img
-                                        class="arow"
-                                        src="./assets/images/arrowr.svg " alt>
-                                    <img src>
-                                </td>
-                                <td class="flags">
-                                    <img src="./assets/images/germany.svg">
-                                </td>
-                                <td>21.08.2026</td>
-                                <td class="grey">Chris Weber</td>
-                                <td>90 Tage</td>
-                                <td><div class="status running"><img
-                                            src="./assets/images/Ellipseb.svg"
-                                            alt> Laufend</div></td>
-                                <td class="grey">Sabine Walter</td>
-                                <td class="actions">
-                                    <i class="icon-t"><img
-                                            src="./assets/images/duplicate.svg"
-                                            alt="duplicate"></i>
-                                    <i class="icon-t"><img
-                                            src="./assets/images/edit.svg"
-                                            alt="edit"></i>
-                                    <i class="icon-t"><img
-                                            src="./assets/images/delete.svg"
-                                            alt="delete"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="flags">
-                                    <img src="./assets/images/germany.svg"><img
-                                        class="arow"
-                                        src="./assets/images/arrowr.svg " alt>
-                                </td>
-                                <td class="flags">
-                                    <img src="./assets/images/germany.svg">
-                                </td>
-                                <td>21.08.2026</td>
-                                <td class="grey">Chris Weber</td>
-                                <td>90 Tage</td>
-                                <td><div class="status pending"><img
-                                            src="./assets/images/Ellipsep.svg"
-                                            alt> Nicht übermittelt</div></td>
-                                <td class="grey">Sabine Walter</td>
-                                <td class="actions">
-                                    <i class="icon-t"><img
-                                            src="./assets/images/duplicate.svg"
-                                            alt="duplicate"></i>
-                                    <i class="icon-t"><img
-                                            src="./assets/images/edit.svg"
-                                            alt="edit"></i>
-                                    <i class="icon-t"><img
-                                            src="./assets/images/delete.svg"
-                                            alt="delete"></i>
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td class="flags">
+                                        <img
+                                            src="./assets/images/germany.svg"><img
+                                            class="arow"
+                                            src="./assets/images/arrowr.svg "
+                                            alt>
+                                    </td>
+                                    <td class="flags">
+                                        <img
+                                            src="./assets/images/france_round.svg">
+                                    </td>
+                                    <td>21.08.2026</td>
+                                    <td class="grey">Chris Weber</td>
+                                    <td>90 Tage</td>
+                                    <td><div class="status done"><img
+                                                src="./assets/images/Ellipseg.svg"
+                                                alt> Abgeschlossen</div></td>
+                                    <td class="grey">Sabine Walter</td>
+                                    <td class="actions">
+                                        <i class="icon-t"><img
+                                                src="./assets/images/duplicate.svg"
+                                                alt="duplicate"></i>
+                                        <i class="icon-t"><img
+                                                src="./assets/images/edit.svg"
+                                                alt="edit"></i>
+                                        <i class="icon-t"><img
+                                                src="./assets/images/delete.svg"
+                                                alt="delete"></i>
+                                    </td>
+                                </tr>
 
-                        </tbody>
+                                <tr>
+                                    <td class="flags">
+                                        <img class="flag"
+                                            src="./assets/images/italy.svg"><img
+                                            class="arow"
+                                            src="./assets/images/arrowr.svg "
+                                            alt>
+                                        <img src>
+                                    </td>
+                                    <td class="flags">
+                                        <img src="./assets/images/united.svg">
+                                    </td>
+                                    <td>21.08.2026</td>
+                                    <td class="grey">Chris Weber</td>
+                                    <td>90 Tage</td>
+                                    <td><div class="status running"><img
+                                                src="./assets/images/Ellipseb.svg"
+                                                alt> Laufend</div></td>
+                                    <td class="grey">Sabine Walter</td>
+                                    <td class="actions">
+                                        <i class="icon-t"><img
+                                                src="./assets/images/duplicate.svg"
+                                                alt="duplicate"></i>
+                                        <i class="icon-t"><img
+                                                src="./assets/images/edit.svg"
+                                                alt="edit"></i>
+                                        <i class="icon-t"><img
+                                                src="./assets/images/delete.svg"
+                                                alt="delete"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="flags">
+                                        <img
+                                            src="./assets/images/spain.svg"><img
+                                            class="arow"
+                                            src="./assets/images/arrowr.svg "
+                                            alt>
+                                    </td>
+                                    <td class="flags">
+                                        <img src="./assets/images/sweden.svg">
+                                    </td>
+                                    <td>21.08.2026</td>
+                                    <td class="grey">Chris Weber</td>
+                                    <td>90 Tage</td>
+                                    <td><div class="status pending"><img
+                                                src="./assets/images/Ellipsep.svg"
+                                                alt> Nicht
+                                            übermittelt</div></td>
+                                    <td class="grey">Sabine Walter</td>
+                                    <td class="actions">
+                                        <i class="icon-t"><img
+                                                src="./assets/images/duplicate.svg"
+                                                alt="duplicate"></i>
+                                        <i class="icon-t"><img
+                                                src="./assets/images/edit.svg"
+                                                alt="edit"></i>
+                                        <i class="icon-t"><img
+                                                src="./assets/images/delete.svg"
+                                                alt="delete"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="flags">
+                                        <img
+                                            src="./assets/images/germany.svg"><img
+                                            class="arow"
+                                            src="./assets/images/arrowr.svg "
+                                            alt>
+                                    </td>
+                                    <td class="flags">
+                                        <img
+                                            src="./assets/images/france_round.svg">
+                                    </td>
+                                    <td>21.08.2026</td>
+                                    <td class="grey">Chris Weber</td>
+                                    <td>90 Tage</td>
+                                    <td><div class="status done"><img
+                                                src="./assets/images/Ellipseg.svg"
+                                                alt> Abgeschlossen</div></td>
+                                    <td class="grey">Sabine Walter</td>
+                                    <td class="actions">
+                                        <i class="icon-t"><img
+                                                src="./assets/images/duplicate.svg"
+                                                alt="duplicate"></i>
+                                        <i class="icon-t"><img
+                                                src="./assets/images/edit.svg"
+                                                alt="edit"></i>
+                                        <i class="icon-t"><img
+                                                src="./assets/images/delete.svg"
+                                                alt="delete"></i>
+                                    </td>
+                                </tr>
 
-                    </table>
+                                <tr>
+                                    <td class="flags">
+                                        <img class="flag"
+                                            src="./assets/images/italy.svg"><img
+                                            class="arow"
+                                            src="./assets/images/arrowr.svg "
+                                            alt>
+                                        <img src>
+                                    </td>
+                                    <td class="flags">
+                                        <img src="./assets/images/united.svg">
+                                    </td>
+                                    <td>21.08.2026</td>
+                                    <td class="grey">Chris Weber</td>
+                                    <td>90 Tage</td>
+                                    <td><div class="status running"><img
+                                                src="./assets/images/Ellipseb.svg"
+                                                alt> Laufend</div></td>
+                                    <td class="grey">Sabine Walter</td>
+                                    <td class="actions">
+                                        <i class="icon-t"><img
+                                                src="./assets/images/duplicate.svg"
+                                                alt="duplicate"></i>
+                                        <i class="icon-t"><img
+                                                src="./assets/images/edit.svg"
+                                                alt="edit"></i>
+                                        <i class="icon-t"><img
+                                                src="./assets/images/delete.svg"
+                                                alt="delete"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="flags">
+                                        <img
+                                            src="./assets/images/spain.svg"><img
+                                            class="arow"
+                                            src="./assets/images/arrowr.svg "
+                                            alt>
+                                    </td>
+                                    <td class="flags">
+                                        <img src="./assets/images/sweden.svg">
+                                    </td>
+                                    <td>21.08.2026</td>
+                                    <td class="grey">Chris Weber</td>
+                                    <td>90 Tage</td>
+                                    <td><div class="status pending"><img
+                                                src="./assets/images/Ellipsep.svg"
+                                                alt> Nicht
+                                            übermittelt</div></td>
+                                    <td class="grey">Sabine Walter</td>
+                                    <td class="actions">
+                                        <i class="icon-t"><img
+                                                src="./assets/images/duplicate.svg"
+                                                alt="duplicate"></i>
+                                        <i class="icon-t"><img
+                                                src="./assets/images/edit.svg"
+                                                alt="edit"></i>
+                                        <i class="icon-t"><img
+                                                src="./assets/images/delete.svg"
+                                                alt="delete"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="flags">
+                                        <img
+                                            src="./assets/images/germany.svg"><img
+                                            class="arow"
+                                            src="./assets/images/arrowr.svg "
+                                            alt>
+                                    </td>
+                                    <td class="flags">
+                                        <img
+                                            src="./assets/images/france_round.svg">
+                                    </td>
+                                    <td>21.08.2026</td>
+                                    <td class="grey">Chris Weber</td>
+                                    <td>90 Tage</td>
+                                    <td><div class="status done"><img
+                                                src="./assets/images/Ellipseg.svg"
+                                                alt> Abgeschlossen</div></td>
+                                    <td class="grey">Sabine Walter</td>
+                                    <td class="actions">
+                                        <i class="icon-t"><img
+                                                src="./assets/images/duplicate.svg"
+                                                alt="duplicate"></i>
+                                        <i class="icon-t"><img
+                                                src="./assets/images/edit.svg"
+                                                alt="edit"></i>
+                                        <i class="icon-t"><img
+                                                src="./assets/images/delete.svg"
+                                                alt="delete"></i>
+                                    </td>
+                                </tr>
 
-                </div>
-                <!-- news  -->
-                <div class="immi flex">
-                    <div class="immi-text flex"><p>Immigration
-                            News</p><a href="/">Alle anzeigen</a></div>
+                                <tr>
+                                    <td class="flags">
+                                        <img class="flag"
+                                            src="./assets/images/italy.svg"><img
+                                            class="arow"
+                                            src="./assets/images/arrowr.svg "
+                                            alt>
+                                        <img src>
+                                    </td>
+                                    <td class="flags">
+                                        <img src="./assets/images/united.svg">
+                                    </td>
+                                    <td>21.08.2026</td>
+                                    <td class="grey">Chris Weber</td>
+                                    <td>90 Tage</td>
+                                    <td><div class="status running"><img
+                                                src="./assets/images/Ellipseb.svg"
+                                                alt> Laufend</div></td>
+                                    <td class="grey">Sabine Walter</td>
+                                    <td class="actions">
+                                        <i class="icon-t"><img
+                                                src="./assets/images/duplicate.svg"
+                                                alt="duplicate"></i>
+                                        <i class="icon-t"><img
+                                                src="./assets/images/edit.svg"
+                                                alt="edit"></i>
+                                        <i class="icon-t"><img
+                                                src="./assets/images/delete.svg"
+                                                alt="delete"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="flags">
+                                        <img
+                                            src="./assets/images/spain.svg"><img
+                                            class="arow"
+                                            src="./assets/images/arrowr.svg "
+                                            alt>
+                                    </td>
+                                    <td class="flags">
+                                        <img src="./assets/images/sweden.svg">
+                                    </td>
+                                    <td>21.08.2026</td>
+                                    <td class="grey">Chris Weber</td>
+                                    <td>90 Tage</td>
+                                    <td><div class="status pending"><img
+                                                src="./assets/images/Ellipsep.svg"
+                                                alt> Nicht
+                                            übermittelt</div></td>
+                                    <td class="grey">Sabine Walter</td>
+                                    <td class="actions">
+                                        <i class="icon-t"><img
+                                                src="./assets/images/duplicate.svg"
+                                                alt="duplicate"></i>
+                                        <i class="icon-t"><img
+                                                src="./assets/images/edit.svg"
+                                                alt="edit"></i>
+                                        <i class="icon-t"><img
+                                                src="./assets/images/delete.svg"
+                                                alt="delete"></i>
+                                    </td>
+                                </tr>
 
-                </div>
-                <div class="news flex">
-                    <div class="new flex">
-                        <div class="news-text flex">
-                        <img src="./assets/images/Ellipseb.svg" alt="">
-                        <p>21.12.2026  |  Worauf Sie im neuen Jahr achten müssen: So vermeiden Unternehmen Bußgelder im Ausland </p>
+                            </tbody>
+
+                        </table>
+
                     </div>
-                    <div class="news-link"><p>Zum Artikel</p><img src="./assets/images/arrowr.svg" alt=""></div>
+                    <!-- news  -->
+                    <div class="immi flex">
+                        <div class="immi-text flex"><p>Immigration
+                                News</p><a href="/">Alle anzeigen</a></div>
+
+                    </div>
+                    <div class="news flex">
+                        <div class="new flex">
+                            <div class="news-text flex">
+                                <img src="./assets/images/Ellipseb.svg" alt>
+                                <p>21.12.2026 | Worauf Sie im neuen Jahr achten
+                                    müssen: So vermeiden Unternehmen Bußgelder
+                                    im Ausland </p>
+                            </div>
+                            <div class="news-link"><p>Zum Artikel</p><img
+                                    src="./assets/images/arrowr.svg" alt></div>
+                        </div>
                     </div>
                 </div>
-                </div>
-               
+
             </div>
         </div>
     </body>
