@@ -113,12 +113,31 @@ input[type="checkbox"] {
     margin: 20px;
   position: fixed;
   left: 0;
-  
+   transition:0.3s;
   width: 214px;
   height: 96%;
   background-color: #ffffff;
   border-radius: 18px;
   box-shadow: 0 10px 30px #16161620;
+}
+/* close side bar css  */
+.sidebar.close{
+    width:65px;
+}
+.sidebar.close .toogle,
+.sidebar.close .menu-title{
+    display:none;
+}
+.sidebar.close li a{
+    justify-content:center;
+}
+.chevron{
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.sidebar.close .chevron{
+    transform: translateX(50%);
 }
 .logo img{
 padding: 13px 0 0 29px;
