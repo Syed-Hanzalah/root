@@ -114,8 +114,8 @@ input[type="checkbox"] {
 
 /* side bar css  */
 .parent {
-    max-width: 1800px;
-    margin: 0 auto;
+    
+    
     position: relative;
   width: 100%;
 }
@@ -242,6 +242,7 @@ hr {
   padding-left: 10px;
 }
 .container {
+    
   margin-left: 254px;
   width: calc(100% - 254px);
   transition: 0.3s;
@@ -253,6 +254,7 @@ hr {
   border-bottom: 1px solid #e4e4e4;
 }
 .container-content {
+    max-width: 1600px;
   padding: 0 40px 0 20px;
 }
 .search-field {
