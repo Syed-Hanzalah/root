@@ -139,7 +139,7 @@ input[type="checkbox"] {
 
 .logo img {
   padding: 13px 0 0 29px;
-  width: 136px;
+  width: 150px;
 }
 .sidebar .chevron {
   position: absolute;
@@ -178,6 +178,9 @@ input[type="checkbox"] {
 }
 .btn img {
   width: 19px;
+}
+.size{
+  width: 20px !important;
 }
 li {
   list-style: none;
