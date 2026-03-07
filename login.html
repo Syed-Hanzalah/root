@@ -1,61 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Login</title>
-        <link rel="stylesheet" href="./assets/css/style.css">
-        <style>
-         @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-        </style>
-    </head>
-    <body>
-
-        <div class="main work-sans">
-            <div class="form-logo">
-                <img src="./assets/images/Title.png" alt="logo">
-            </div>
-            <form class="f-login">
-                <div class="inputs">
-                    <div class="label">
-                        <label class="md" for="mail">E-Mail Adresse</label>
-                    </div>
-                    <img class="inp-icon" src="./assets/images/user-circle.svg" alt="lock">
-                    <input class="input-field sm" type="text" id="mail"
-                        placeholder="E-Mail Adresse"
-                required>
-                </div>
-
-                <div class="inputs">
-                    <div class="label flex">
-                        <label class="md" for="password">Passwort</label> 
-                        <a class="sm forget" href="/">Passwort vergessen?</a>
-                    </div>
-                    <img class="inp-icon" src="./assets/images/lock-01.svg" alt="lock">
-                    <input class="input-field sm" type="password" id="password"
-                        placeholder="Passwort"
-                        required>
-                </div>
-
-                <div class="form-check flex">
-                    <input class="form-check-input" type="checkbox" value
-                        id="bleiben" />
-                    <label class="form-check-label" for="bleiben"> Eingeloggt
-                        bleiben</label>
-                </div>
-
-                <button class="login" type="submit">Login</button>
-                <p class="center sm reg">Sie haben noch keinen Account? <a class="forget"
-                        href="/">Registrieren</a></p>
-
-            </form>
-            <div class="links">
-                <a href="/">Kontakt</a> <img
-                    src="./assets/images/Ellipse 11610.png" alt>
-                <a href="/">Impressum</a><img
-                    src="./assets/images/Ellipse 11610.png" alt>
-                <a href="/">Datenschutz</a>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./assets/css/style.css?v=1" />
+  </head>
+  <body>
+    <div class="main work-sans">
+      <div class="form-logo">
+        <img src="./assets/images/Title.png" alt="logo" />
+      </div>
+      <form class="f-login">
+        <div class="inputs">
+          <div class="label">
+            <label class="md" for="mail">E-Mail Adresse</label>
+          </div>
+          <img
+            class="inp-icon"
+            src="./assets/images/user-circle.svg"
+            alt="lock"
+          />
+          <input
+            class="input-field sm"
+            type="text"
+            id="mail"
+            placeholder="E-Mail Adresse"
+            required
+          />
         </div>
-    </body>
+
+        <div class="inputs">
+          <div class="label flex">
+            <label class="md" for="password">Passwort</label>
+            <a class="sm forget" href="/">Passwort vergessen?</a>
+          </div>
+          <img class="inp-icon" src="./assets/images/lock-01.svg" alt="lock" />
+          <input
+            class="input-field sm"
+            type="password"
+            id="password"
+            placeholder="Passwort"
+            required
+          />
+        </div>
+
+        <div class="form-check flex">
+          <input class="form-check-input" type="checkbox" value id="bleiben" />
+          <label class="form-check-label" for="bleiben">
+            Eingeloggt bleiben</label
+          >
+        </div>
+
+        <button class="login" type="submit">Login</button>
+        <p class="center sm reg">
+          Sie haben noch keinen Account?
+          <a class="forget" href="/">Registrieren</a>
+        </p>
+      </form>
+      <div class="links">
+        <a href="/">Kontakt</a>
+        <img src="./assets/images/Ellipse 11610.png" alt />
+        <a href="/">Impressum</a
+        ><img src="./assets/images/Ellipse 11610.png" alt />
+        <a href="/">Datenschutz</a>
+      </div>
+    </div>
+  </body>
 </html>
