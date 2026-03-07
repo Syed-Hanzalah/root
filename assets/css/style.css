@@ -679,6 +679,10 @@ hr {
 .service:hover{
   box-shadow: 0 0 18px rgba(206, 32, 41, 0.56);
 }
+.service a{
+  color: #000000;
+  text-decoration: none;
+}
 .service p {
   font-family: "work-sans", sans-serif;
   font-size: 17px;
