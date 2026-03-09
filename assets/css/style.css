@@ -1146,6 +1146,12 @@ padding-bottom: 24px;
   .services {
     grid-template-columns: 1fr;
   }
+  .profile-form{
+    padding: 10px;
+  }
+  .pro{
+    gap: 10px;
+  }
 }
 
 @media (min-width: 768px) {
