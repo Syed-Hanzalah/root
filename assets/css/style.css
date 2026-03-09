@@ -894,6 +894,179 @@ input:checked + .slider::before{
 
   margin: 17px 17px 12px 0;
 }
+/* upload page css  */
+.uploads-container{
+display: grid;
+grid-template-columns: 3fr 2fr;
+column-gap: 40px;
+}
+.uploads-content{
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 7px 8px 35px -6px  #0000000f;
+}
+.drag{
+    position: relative;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  padding: 30px 0;
+ 
+}
+.drag::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  padding: 2px;
+  background:
+    repeating-linear-gradient(90deg,#D8DAEB 0 4px,transparent 4px 10px) top,
+    repeating-linear-gradient(90deg,#D8DAEB 0 4px,transparent 4px 10px) bottom,
+    repeating-linear-gradient(0deg,#D8DAEB 0 4px,transparent 4px 10px) left,
+    repeating-linear-gradient(0deg,#D8DAEB 0 4px,transparent 4px 10px) right;
+
+  background-size: 100% 2px,100% 2px,2px 100%,2px 100%;
+  background-repeat: no-repeat;
+}
+.drag img{
+  height: 72px;
+}
+.drag img,.drag-format{
+padding-bottom: 24px;
+}
+.up-t{
+  padding: 10px 0;
+  color: #85878D;
+  font-size: 13px;
+}
+.drag-h{
+  padding-bottom: 11px;
+  font-size: 17px;
+  line-height: 100%;
+  font-weight: 500;
+  color: #101111;
+}
+.drag-format{
+  font-size: 13px;
+  line-height: 150%;
+  color: #7D7D7D;
+}
+.drag-btn{
+  background-color: #ffffff;
+  border:1px solid #CE2029 ;
+  border-radius: 10px;
+  padding:9px 15px ;
+  font-size: 13px;
+  font-weight:600;
+}
+.s-icon img{
+  height: 24px;
+}
+.s-files{
+  margin-top: 11px;
+  border: 1px solid #D5D3E0;
+  border-radius: 10px;
+  padding: 10px 10px 10px 15px;
+  align-items: center;
+  width: 100%;
+}
+.file-details{
+  padding-left: 20px;
+  width: 100%;
+}
+.percent img{
+  height: 19px;
+}
+.bin img{
+  height: 19px;
+}
+.bin{
+  border: 1px solid #D5D3E0;
+  border-radius: 10px;
+  padding: 8px;
+  
+}
+.percent{
+  padding-top: 5px;
+  align-items: center;
+  font-size: 13px;
+    line-height: 100%;
+    color: #949FB1;
+    word-spacing: 5px;
+}
+.file-name{
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 100%;
+}
+.selected{
+  padding-top:20px ;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 100%;
+}
+.upload-check{
+  padding-left: 17px;
+}
+.check-inner input[type="checkbox"]{
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: transparent;
+}
+.check-inner{
+  align-items: center;
+}
+.form-check{
+  padding: 19px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.order-no{
+  color: #E1E3E6;
+  padding: 9px 12px;
+  border-radius: 6px;
+  border: 1px solid #E1E3E6;
+}
+.hoch{
+    padding: 12px;
+    background-color: #D42E2A;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    text-decoration: underline;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .uploads-option{
+    padding: 20px 24px;
+    box-shadow: 7px 8px 35px -6px  #0000000f;
+    border-radius: 22px;
+  }
+  .opt-h{
+    font-size: 14px;
+    padding-bottom: 20px;
+    line-height: 100%;
+    color: #000000;
+    font-weight: 600;
+  }
+  
+  .rdot{
+    font-size: 19px;
+    font-weight: 900;
+    color: #ce2029;
+    padding-right: 6px;
+  }
+  .opt-para{
+    font-size: 14px;
+    line-height: 210%;
+    color: #000000;
+    padding-bottom: 30px;
+  }
 @media (max-width: 1200px) {
   .services {
     grid-template-columns: repeat(3, minmax(0, 1fr));
