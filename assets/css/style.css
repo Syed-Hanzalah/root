@@ -1096,7 +1096,11 @@ padding-bottom: 24px;
     line-height: 150%;
     color: #000000;
   }
+  .news-head{
+    justify-content: space-between;
+  }
   .date{
+    padding-left: 30px;
     font-size: 13px;
     line-height: 150%;
     color: #85878D;
