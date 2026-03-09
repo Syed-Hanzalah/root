@@ -90,3 +90,15 @@ searchInput.addEventListener("keyup", function () {
     });
 
 });
+
+function toggleColumns(){
+
+let popup = document.getElementById("columnPopup");
+
+if(popup.style.display === "block"){
+popup.style.display = "none";
+}else{
+popup.style.display = "block";
+}
+
+}

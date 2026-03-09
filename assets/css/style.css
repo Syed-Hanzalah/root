@@ -115,17 +115,17 @@ input[type="checkbox"] {
 /* side bar css  */
 .parent {
     
-    
+     background-color: #FCFCFC;
     position: relative;
   width: 100%;
 }
 .sidebar {
   margin: 20px;
-  position: absolute;
+  position: fixed;
   left: 0;
   transition: 0.3s;
   width: 224px;
-  height: calc(100% - 40px);
+  height: calc(100vh - 40px);
   background-color: #ffffff;
   border-radius: 18px;
   box-shadow: 0 10px 30px #16161620;
@@ -254,7 +254,7 @@ hr {
   border-bottom: 1px solid #e4e4e4;
 }
 .container-content {
-  background-color: #FCFCFC;
+ 
     max-width: 1600px;
   padding: 0 40px 0 20px;
 }
@@ -1152,6 +1152,34 @@ padding-bottom: 24px;
   .pro{
     gap: 10px;
   }
+}
+/* table php  */
+.column-popup{
+position:absolute;
+right:40px;
+top:320px;
+background:white;
+padding:15px;
+border-radius:10px;
+box-shadow:0 10px 20px rgba(0,0,0,0.15);
+display:none;
+z-index:999;
+}
+
+.column-popup label{
+display:block;
+margin-bottom:8px;
+font-size:14px;
+}
+
+.column-popup button{
+margin-top:10px;
+padding:6px 12px;
+border:none;
+background:#000;
+color:white;
+border-radius:6px;
+cursor:pointer;
 }
 
 @media (min-width: 768px) {
