@@ -91,6 +91,27 @@ searchInput.addEventListener("keyup", function () {
 
 });
 
+// expand news script 
+document.querySelectorAll(".show-more").forEach(btn => {
+
+    btn.addEventListener("click", function(e){
+        e.preventDefault();
+
+        const text = this.closest(".news-content").querySelector(".news-text");
+
+        text.classList.toggle("expand");
+
+        if(text.classList.contains("expand")){
+            this.innerHTML = 'Weniger anzeigen <img src="./assets/images/red-cgev-down.svg">';
+        }else{
+            this.innerHTML = 'Mehr anzeigen <img src="./assets/images/red-cgev-down.svg">';
+        }
+
+    });
+
+});
+// table Columns 
+
 function toggleColumns(){
 
 let popup = document.getElementById("columnPopup");

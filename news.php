@@ -1,0 +1,249 @@
+<?php
+
+$conn = new mysqli("localhost", "root", "", "news_db");
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT datum, titel, text FROM visum_news 
+        WHERE online = 1 
+        ORDER BY datum DESC ";
+
+$result = $conn->query($sql);
+
+?>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News</title>
+    <link rel="stylesheet" href="./assets/css/style.css?v=1" />
+</head>
+
+<body class="inter">
+    <div class="parent flex">
+        <nav class="sidebar">
+            <header class="flex">
+                <div class="logo">
+                    <img src="./assets/images/Title.png" alt="logo" />
+                </div>
+                <div class="close-logo">
+                    <img src="./assets/images/closelogo.png" alt="logo" />
+                </div>
+                <i class="chevron"><img src="./assets/images/Slider.svg" alt="Image" /></i>
+            </header>
+            <div class="menu">
+                <a href="/">
+                    <button class="btn">
+                        <img src="./assets/images/Vector.svg" alt="dashboard" />
+                        <span class="ss toogle">Neuer Auftrag</span>
+                    </button>
+                </a>
+                <div class="menu-links">
+                    <ul>
+                        <li>
+                            <a href="/">
+                                <img src="./assets/images/dashboard.svg" alt class="red-icon size" />
+                                <img class="normal-icon size" src="./assets/images/dash.svg" alt="dashboard" />
+                                <span class="ss toogle">Dashboard</span></a>
+                        </li>
+                        <li>
+                            <a href="/">
+                                <img src="./assets/images/messages-red.svg" alt class="red-icon size" />
+                                <img class="normal-icon size" src="./assets/images/messages.svg" alt="dashboard" />
+                                <span class="ss toogle">Benachrichtigungen</span></a>
+                        </li>
+                        <li>
+                            <a href="/" class="active">
+                                <img src="./assets/images/checklist-red.svg" alt class="red-icon size" />
+                                <img class="normal-icon size" src="./assets/images/checklist.svg" alt="dashboard" />
+                                <span class="ss toogle">Aufträge</span></a>
+                        </li>
+                        <hr />
+                        <p class="menu-title">DOKU <span class="toogle">MENTE</span></p>
+                        <li>
+                            <a href="/">
+                                <img src="./assets/images/dokumente-red.svg" alt class="red-icon" />
+                                <img class="normal-icon" src="./assets/images/file.svg" alt="dashboard" />
+                                <span class="ss toogle">Dokumente</span></a>
+                        </li>
+                        <li>
+                            <a href="/">
+                                <img src="./assets/images/NoteBlank-red.svg" alt class="red-icon" />
+                                <img class="normal-icon" src="./assets/images/NoteBlank.svg" alt="dashboard" />
+                                <span class="ss toogle">Rechnungen</span></a>
+                        </li>
+                        <hr />
+                        <p class="menu-title">SERVICES</p>
+                        <li>
+                            <a href="/"><img src="./assets/images/visa-red.svg" alt class="red-icon" />
+                                <img class="normal-icon" src="./assets/images/visabestimmungen.svg" alt="dashboard" />
+                                <span class="ss toogle">Visa</span></a>
+                        </li>
+                        <li>
+                            <a href="/">
+                                <img src="./assets/images/a1-red.svg" alt class="red-icon" />
+                                <img class="normal-icon" src="./assets/images/a1.svg" alt="dashboard" />
+                                <span class="ss toogle">A1Bescheinigung</span></a>
+                        </li>
+                        <li>
+                            <a href="/">
+                                <img src="./assets/images/eu-meldung-red.svg" alt class="red-icon" />
+                                <img class="normal-icon" src="./assets/images/eu-meldung.svg" alt="dashboard" />
+                                <span class="ss toogle">EU
+                                    Meldung</span></a>
+                        </li>
+                        <li>
+                            <a href="/">
+                                <img src="./assets/images/relocation-red.svg" alt class="red-icon" />
+                                <img class="normal-icon" src="./assets/images/relocation.svg" alt="dashboard" />
+                                <span class="ss toogle">Relocation</span></a>
+                        </li>
+                        <li>
+                            <a href="/">
+                                <img src="./assets/images/immigration-red.svg" alt class="red-icon" />
+                                <img class="normal-icon" src="./assets/images/immigration.svg" alt="dashboard" />
+                                <span class="ss toogle">Immigration</span></a>
+                        </li>
+                        <li>
+                            <a href="/">
+                                <img src="./assets/images/legalisation-red.svg" alt class="red-icon" />
+                                <img class="normal-icon" src="./assets/images/legalisation.svg" alt="dashboard" />
+                                <span class="ss toogle">Legalisation</span></a>
+                        </li>
+                        <hr />
+                        <p class="menu-title">NEWS</p>
+                        <li>
+                            <a href="/">
+                                <img src="./assets/images/news-red.svg" alt class="red-icon" />
+                                <img class="normal-icon" src="./assets/images/news.svg" alt="dashboard" />
+                                <span class="ss toogle">News</span></a>
+                        </li>
+                    </ul>
+                    <hr />
+                    <ul>
+                        <li>
+                            <a href="/">
+                                <img src="./assets/images/settings-red.svg" alt class="red-icon" />
+                                <img class="normal-icon" src="./assets/images/einstellungen.svg" alt="dashboard" />
+                                <span class="ss toogle">Profileinstellungen</span></a>
+                        </li>
+                        <li>
+                            <a href="/">
+                                <img src="./assets/images/logout-red.svg" alt class="red-icon" />
+                                <img class="normal-icon" src="./assets/images/logout1.svg" alt="dashboard" />
+                                <span class="ss toogle">Abmelden</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="search-head flex">
+                <div class="menu-toggle">
+                    <img src="./assets/images/menu.png" alt="menu" />
+                </div>
+                <div class="search">
+                    <img class="s-img" src="./assets/images/Search-icon.svg" alt="search" />
+                    <input id="searchInput" class="search-field" type="text"
+                        placeholder="Suche etwas mithilfe von KI" />
+                </div>
+                <div class="info flex">
+                    <div class="trumf">
+                        <a href="/">
+                            <img src="./assets/images/trump.png" alt="Image" />
+                        </a>
+                    </div>
+                    <div class="info-icons flex">
+                        <a href="/"><img src="./assets/images/Glocke.svg" alt="bell" /></a>
+                        <a href="/"><img src="./assets/images/FAQ.svg" alt="faq" /></a>
+                    </div>
+                    <div class="info-bar flex" role="button" tabindex="0" aria-label="Open profile menu">
+                        <img class="frame" src="./assets/images/Frame.svg" alt="frame" />
+                        <p>M.Muller</p>
+                        <img class="chev" src="./assets/images/Pfeil-unten.svg" alt="chevron" />
+                        <div class="profile-dropdown">
+                            <a href="./trump.html">Mein Profil</a>
+                            <a href="/">Profileinstellungen</a>
+                            <a href="./login.html">Abmelden</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- search head end  -->
+
+            <div class="container-content">
+                <div class="immi">
+                    <div class="flex">
+                        <div class="immi-text flex">
+                            <p>News</p>
+
+                        </div>
+
+                    </div>
+                    <p class="immi-text inter up-t">
+                        Bitte geben Sie hier die konkreten Daten ein und
+                        folgen Sie den Anweisungen.
+
+                    </p>
+                </div>
+
+                <!-- news  -->
+                <div class="news-container sans">
+                    <div class="news-60">
+
+                        <?php if ($result && $result->num_rows > 0) { ?>
+
+                            <?php while ($row = $result->fetch_assoc()) { ?>
+
+                                <div class="news-content">
+
+                                    <div class="news-head flex">
+                                        <p class="heading">
+                                            <?php echo htmlspecialchars($row['titel']); ?>
+                                        </p>
+
+                                        <p class="date">
+                                            <?php echo date("d.m.Y", strtotime($row['datum'])); ?>
+                                        </p>
+                                    </div>
+
+                                    <p class="n-para news-text">
+                                        <?php echo htmlspecialchars($row['text']); ?>
+                                    </p>
+
+                                    <div class="news-chev">
+                                        <a href="#" class="show-more">
+                                            Mehr anzeigen
+                                            <img src="./assets/images/red-cgev-down.svg" alt="">
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                            <?php } ?>
+
+                        <?php } else { ?>
+
+                            <p>No news available.</p>
+
+                        <?php } ?>
+
+                    </div>
+
+                    <div></div>
+                </div>
+                
+            </div>
+            <div class="quick-links inter">
+                    <a href="/">Impressum </a> | <a href="/">Datenschutz </a> | <a href="/">AGB </a> | <a
+                        href="/">Kontakt </a>
+                </div>
+        </div>
+</body>
+<script src="./assets/js/script.js"></script>
+
+</html>
