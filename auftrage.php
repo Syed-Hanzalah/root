@@ -485,7 +485,7 @@ $allColumns = getAvailableColumns();
                           <ul class="column-list">
                               <?php foreach ($allColumns as $key => $label): ?>
                                   <li>
-                                      <input type="checkbox" name="cols[]" value="<?= htmlspecialchars($key) ?>" id="col_<?= $key ?>"
+                                      <input class="pop" type="checkbox" name="cols[]" value="<?= htmlspecialchars($key) ?>" id="col_<?= $key ?>"
                                           <?= in_array($key, $visibleCols) ? 'checked' : '' ?>>
                                       <label for="col_<?= $key ?>"><?= htmlspecialchars($label) ?></label>
                                   </li>
