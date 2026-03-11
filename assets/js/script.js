@@ -112,14 +112,44 @@ document.querySelectorAll(".show-more").forEach(btn => {
 });
 // table Columns 
 
-function toggleColumns(){
+ (function () {
+            // Popup logic
+            const trigger = document.getElementById('columnPopupTrigger');
+            const popup = document.getElementById('columnPopup');
+            const closeBtn = document.getElementById('closePopupBtn');
+            const cancelBtn = document.getElementById('cancelPopupBtn');
 
-let popup = document.getElementById("columnPopup");
+            if (trigger && popup) {
+                trigger.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    popup.classList.toggle('show');
+                });
+            }
 
-if(popup.style.display === "block"){
-popup.style.display = "none";
-}else{
-popup.style.display = "block";
-}
+            // Close buttons
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function () {
+                    popup.classList.remove('show');
+                });
+            }
+            if (cancelBtn) {
+                cancelBtn.addEventListener('click', function () {
+                    popup.classList.remove('show');
+                });
+            }
 
-}
+            // Click outside closes popup (except on trigger)
+            window.addEventListener('click', function (e) {
+                if (!popup || !trigger) return;
+                if (!popup.contains(e.target) && !trigger.contains(e.target)) {
+                    popup.classList.remove('show');
+                }
+            });
+
+            // Prevent clicks inside popup from triggering the close logic
+            if (popup) {
+                popup.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                });
+            }
+        })();

@@ -7,7 +7,6 @@ if ($conn->connect_error) {
 }
 
 $sql = "SELECT datum, titel, text FROM visum_news 
-        WHERE online = 1 
         ORDER BY datum DESC ";
 
 $result = $conn->query($sql);
@@ -236,12 +235,13 @@ $result = $conn->query($sql);
 
                     <div></div>
                 </div>
-                
-            </div>
-            <div class="quick-links inter">
+                <div class="quick-links inter">
                     <a href="/">Impressum </a> | <a href="/">Datenschutz </a> | <a href="/">AGB </a> | <a
-                        href="/">Kontakt </a>
+                        href="/">Kontakt
+                    </a>
                 </div>
+            </div>
+
         </div>
 </body>
 <script src="./assets/js/script.js"></script>

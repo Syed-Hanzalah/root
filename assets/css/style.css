@@ -492,7 +492,7 @@ hr {
 }
 .table-container {
   padding: 20px 0;
-  overflow-y: auto; /* vertical scroll */
+  overflow-y: unset; /* vertical scroll */
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -1137,15 +1137,171 @@ padding-bottom: 24px;
   }
   /* news expand css  */
   .news-text{
-    display: -webkit-box;
-    -webkit-line-clamp: 3; /* number of visible lines */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    transition: all 0.3s ease;
+  overflow: hidden;
+  max-height: 60px;   /* height for ~7-8 lines */
+  transition: max-height 0.4s ease;
 }
 
 .news-text.expand{
-    -webkit-line-clamp: unset;
+  max-height: 1000px; /* big value for full text */
+  transition: max-height 0.3s ease;
+}
+/* table popup  */
+.table-container {
+    position: relative;
+}
+
+.column-toggle-trigger {
+    cursor: pointer;
+    user-select: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.column-popup {
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    background: #FCFCFC;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    width: 260px;
+    max-height: 350px;
+    overflow-y: auto;
+    z-index: 1000;
+    padding: 12px 0;
+    display: none !important;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+.column-popup.show {
+    display: block !important;
+}
+
+.relative{
+  position: relative;
+}
+
+.popup-header {
+    padding: 8px 16px 10px;
+    border-bottom: 1px solid #e5e7eb;
+    font-weight: 600;
+    color: #1f2937;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.popup-header button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #6b7280;
+    padding: 0 4px;
+    line-height: 1;
+}
+
+.popup-header button:hover {
+    color: #111827;
+}
+
+.column-list {
+    list-style: none;
+    margin: 0;
+    padding: 8px 0;
+}
+
+.column-list li {
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.1s;
+    font-size: 0.9rem;
+    color: #374151;
+}
+
+.column-list li:hover {
+    background: #f3f4f6;
+}
+
+.column-list input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #2563eb;
+    margin: 0;
+    cursor: pointer;
+}
+
+.column-list label {
+    cursor: pointer;
+    flex: 1;
+}
+
+.popup-actions {
+    padding: 12px 16px;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup-actions button {
+    padding: 6px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.popup-actions button[type="button"] {
+    background: none;
+    border: 1px solid #d1d5db;
+    color: #374151;
+}
+
+.popup-actions button[type="button"]:hover {
+    background: #f3f4f6;
+}
+
+.popup-actions button[type="submit"] {
+    background: #2563eb;
+    border: none;
+    color: white;
+}
+
+.popup-actions button[type="submit"]:hover {
+    background: #1d4ed8;
+}
+/* table php  */
+/* .column-popup{
+position:absolute;
+right:40px;
+top:320px;
+background:white;
+padding:15px;
+border-radius:10px;
+box-shadow:0 10px 20px rgba(0,0,0,0.15);
+display:none;
+z-index:999;
+} */
+
+.column-popup label{
+display:block;
+margin-bottom:8px;
+font-size:14px;
+}
+
+.column-popup button{
+margin-top:10px;
+padding:6px 12px;
+border:none;
+background:#000;
+color:white;
+border-radius:6px;
+cursor:pointer;
 }
 @media (max-width: 1200px) {
   .services {
@@ -1173,34 +1329,7 @@ padding-bottom: 24px;
     gap: 10px;
   }
 }
-/* table php  */
-.column-popup{
-position:absolute;
-right:40px;
-top:320px;
-background:white;
-padding:15px;
-border-radius:10px;
-box-shadow:0 10px 20px rgba(0,0,0,0.15);
-display:none;
-z-index:999;
-}
 
-.column-popup label{
-display:block;
-margin-bottom:8px;
-font-size:14px;
-}
-
-.column-popup button{
-margin-top:10px;
-padding:6px 12px;
-border:none;
-background:#000;
-color:white;
-border-radius:6px;
-cursor:pointer;
-}
 
 @media (min-width: 768px) {
   
