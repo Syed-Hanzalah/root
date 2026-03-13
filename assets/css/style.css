@@ -729,14 +729,53 @@ hr {
 }
 .profile-pic img{
   height: 152px;
+  width: 152px;
   border-radius: 50%;
 }
+
 .profile-pic{
   width: 100%;
   text-align: center;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 7px 8px 35px -6px  #0000000f;
+  box-shadow: 7px 8px 35px -6px #0000000f;
+}
+
+.img-wrapper{
+  position: relative;
+  display: inline-block;
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 152px;
+  width: 152px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.601);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  opacity: 0;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.img-wrapper:hover .overlay{
+  opacity: 6;
+}
+
+.overlay i span{
+  font-size: 11px;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+.over-pic img{
+  height: 48px;
 }
 .p-name{
   font-size: 20px;
@@ -790,7 +829,7 @@ width: 65%;
 .switch{
   position: relative;
   display: inline-block;
-  width: 52px;
+  width: 44px;
   height: 20px;
   margin-left: 7px;
 }
