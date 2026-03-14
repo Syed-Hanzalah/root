@@ -727,12 +727,34 @@ hr {
   gap:36px ;
 
 }
+
+.img-wrapper .initials {
+   
+    object-fit: cover;
+}
+.initials {
+    width: 152px;
+    height: 152px;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff;
+}
 .profile-pic img{
   height: 152px;
   width: 152px;
   border-radius: 50%;
 }
-
+.success{
+  color: green;
+}
+.error{
+  color: red;
+}
 .profile-pic{
   width: 100%;
   text-align: center;
