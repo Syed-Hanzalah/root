@@ -1367,6 +1367,81 @@ cursor:pointer;
 .column-popup button:hover{
   color:rgb(213, 171, 171);
 }
+/* messages page css  */
+.message{
+  align-items: center;
+  padding: 16px 16px 17px 16px;
+  gap: 28px;
+  border-radius: 16px;
+ 
+  border-bottom: 0.5px solid #dfdfdf;
+}
+.unread{
+   background-color: #26980013;
+}
+.me-pic img{
+  height: 33px;
+}
+.status{
+  padding: 4px ;
+  text-align: center;
+  border-radius: 50px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 12px;
+  
+}
+.me-detail{
+  width: 90%;
+}
+.complete{
+  color: #259800;
+  border: 0.5px solid #259800;
+}
+.imp{
+  color: #CE2029;
+  border: 0.5px solid #CE2029;
+}
+.infomation{
+  color: #3F78DC;
+  border: 0.5px solid #3F78DC;
+}
+.user{
+  text-decoration: underline;
+}
+.d-para{
+  font-weight: 600;
+  font-size: 14px;
+  color: #505050;
+}
+.time{
+  gap: 5px;
+justify-content: end;
+}
+.time p{
+  font-weight: 600;
+  font-size: 14px;
+  color: #505050;
+  width: 100px;
+text-align: right;
+}
+.time img{
+  text-align: right;
+  height: 16px;
+}
+.me-icons{
+  margin-right: 0;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mail{
+  text-align: right;
+}
+.mail img{
+  width: 18px;
+}
 @media (max-width: 1200px) {
   .services {
     grid-template-columns: repeat(3, minmax(0, 1fr));
