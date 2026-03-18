@@ -1,4 +1,4 @@
 <?php
 session_start();
-$_SESSION['idang'] = 1;
+$_SESSION['idang'] = 0;
 ?>

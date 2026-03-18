@@ -11,7 +11,7 @@
       <div class="form-logo">
         <img src="./assets/images/Title.png" alt="logo" />
       </div>
-      <form class="f-login">
+      <form class="f-login" method="POST" action="register.php">
         <div class="inputs">
           <div class="label flex">
             <label class="md" for="name">Name</label>
@@ -22,6 +22,7 @@
             class="input-field sm"
             type="text"
             id="name"
+            name="name"
             placeholder="Name"
             required
           />
@@ -37,8 +38,9 @@
           />
           <input
             class="input-field sm"
-            type="text"
+            type="email"
             id="mail"
+            name="email"
             placeholder="E-Mail Adresse"
             required
           />
