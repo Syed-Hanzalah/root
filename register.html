@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Register</title>
     <link rel="stylesheet" href="./assets/css/style.css?v=1" />
   </head>
   <body>
@@ -12,6 +12,20 @@
         <img src="./assets/images/Title.png" alt="logo" />
       </div>
       <form class="f-login">
+        <div class="inputs">
+          <div class="label flex">
+            <label class="md" for="name">Name</label>
+            
+          </div>
+          <img class="inp-icon" src="./assets/images/lock-01.svg" alt="lock" />
+          <input
+            class="input-field sm"
+            type="text"
+            id="name"
+            placeholder="Name"
+            required
+          />
+        </div>
         <div class="inputs">
           <div class="label">
             <label class="md" for="mail">E-Mail Adresse</label>
@@ -29,33 +43,10 @@
             required
           />
         </div>
-
-        <div class="inputs">
-          <div class="label flex">
-            <label class="md" for="password">Passwort</label>
-            <a class="sm forget" href="/">Passwort vergessen?</a>
-          </div>
-          <img class="inp-icon" src="./assets/images/lock-01.svg" alt="lock" />
-          <input
-            class="input-field sm"
-            type="password"
-            id="password"
-            placeholder="Passwort"
-            required
-          />
-        </div>
-
-        <div class="form-check flex">
-          <input class="form-check-input" type="checkbox" value id="bleiben" />
-          <label class="form-check-label" for="bleiben">
-            Eingeloggt bleiben</label
-          >
-        </div>
-
-        <button class="login" type="submit">Login</button>
+        <button class="login" type="submit">Register</button>
         <p class="center sm reg">
-          Sie haben noch keinen Account?
-          <a class="forget" href="./register.html">Registrieren</a>
+         Sie haben Account?
+          <a class="forget" href="./login.html">Login</a>
         </p>
       </form>
       <div class="links">

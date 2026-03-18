@@ -154,3 +154,6 @@ document.querySelectorAll(".show-more").forEach(btn => {
             }
         })();
         // profle image 
+document.querySelector(".close-btn").addEventListener("click", function () {
+  this.parentElement.style.display = "none";
+});
