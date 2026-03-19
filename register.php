@@ -1,5 +1,8 @@
-
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+session_start();
 require_once "db.php";
 require_once "sendMail.php";
 
@@ -8,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
     $email = $_POST['email'];
 
-    // Check if email exists
+    // 1️⃣ Check if email exists
     $stmt = $conn->prepare("SELECT idk FROM visum_kunden WHERE email=?");
     $stmt->bind_param("s", $email);
     $stmt->execute();
@@ -19,15 +22,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    // Generate token
+    // 2️⃣ Generate token
     $token = bin2hex(random_bytes(50));
 
-    // Insert user
-    $stmt = $conn->prepare("INSERT INTO visum_kunden (nam1, email, token) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $name, $email, $token);
+    // 3️⃣ Generate idk manually
+    $result2 = $conn->query("SELECT MAX(idk) AS max_id FROM visum_kunden");
+    $row2 = $result2->fetch_assoc();
+    $new_idk = $row2['max_id'] + 1;
+
+    // 4️⃣ Insert user WITH idk
+    $stmt = $conn->prepare("INSERT INTO visum_kunden (idk, nam1, email, token) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("isss", $new_idk, $name, $email, $token);
     $stmt->execute();
 
-    // Verification link
+    // 5️⃣ Send email
     $link = "http://localhost/root/verify.php?token=$token";
 
     $body = "

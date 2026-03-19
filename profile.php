@@ -1,6 +1,9 @@
 <?php
 session_start();
 require_once "includes/functions.php";
+if (!isset($_SESSION['idang'])) {
+    header('location:login.html');
+}
 $idk = $_SESSION['idang'];
 // Fetch current profile data
 $profile = getProfile($idk);
@@ -135,7 +138,7 @@ if (isset($_GET['success']) && isset($_GET['message'])) {
                                 <span class="ss toogle">Profileinstellungen</span></a>
                         </li>
                         <li>
-                            <a href="/">
+                            <a href="logout.php">
                                 <img src="./assets/images/logout-red.svg" alt class="red-icon" />
                                 <img class="normal-icon" src="./assets/images/logout1.svg" alt="dashboard" />
                                 <span class="ss toogle">Abmelden</span></a>
